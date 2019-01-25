@@ -11,14 +11,17 @@ df$fd.diff <- df$fd.spread - df$actual
 
 sqrt(mean(df[,"X538.diff"]^2)) # 13.57337
 sqrt(mean(df[,"fd.diff"]^2)) # 13.10273
+sqrt(mean(df[,"actual"]^2)) # 14.50431
 
 ggplot() + 
-  geom_histogram(data=df, aes(x=X538.diff, y=..density..), binwidth = 2, fill = 'red', alpha = .3) +
-  geom_histogram(data=df, aes(x=fd.diff, y=..density..), binwidth = 2, fill = 'blue', alpha = .3) + 
-  geom_line(data=df, aes(x=X538.diff), stat="density", size=2, alpha=.5, color='red') +
-  geom_line(data=df, aes(x=fd.diff), stat="density", size=2, alpha=.5, color='blue') +
-  xlab("Difference Between Prediciton and Result") + 
-  ylab("Density") 
+  geom_histogram(data=df, aes(x=X538.diff, y=..density.., fill = '538'), binwidth = 2, alpha = .3) +
+  geom_histogram(data=df, aes(x=fd.diff, y=..density.., fill = 'Vegas'), binwidth = 2, alpha = .3) + 
+  geom_line(data=df, aes(x=X538.diff), color='red', stat="density", size=2, alpha=.5) +
+  geom_line(data=df, aes(x=fd.diff), color='blue', stat="density", size=2, alpha=.5) +
+  scale_fill_manual(values = c('red', 'blue'), name="") +
+  xlab("Difference Between Predicted Spread and Actual Spread") + 
+  ylab("Density") +
+  ggtitle("2018 Season")
 
 # Does either have any bias?
 mean(df[,"X538.diff"]) # -0.3867188
@@ -55,7 +58,7 @@ View(teams$X538.diff %>% aggregate(by=list(Category=teams$team), FUN=mean))
 
 ggplot() + 
   geom_col(data = teams$X538.diff %>% aggregate(by=list(Category=teams$team), FUN=mean), 
-           aes(x = reorder(Category, x), y = x)) + 
-  xlab("Teams") + 
-  ylab("Average Performance Relative to 538 Predictions") 
-
+           aes(x = reorder(Category, x), y = x), fill = 'skyblue') + 
+  xlab("") + 
+  ylab("Difference from Predicted Spread") +
+  ggtitle('Avg Performance Compared to 538 Predictions - 2018')
