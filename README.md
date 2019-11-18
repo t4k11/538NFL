@@ -1,5 +1,4 @@
-# 538NFL
-Analyzing 538's NFL Predictions Over the 2018 Season
+# Analyzing 538's NFL Predictions Over the 2018 Season
 
 538 creates its NFL predictions using an ['Elo" rating system](https://fivethirtyeight.com/methodology/how-our-nfl-predictions-work/), similar to the one used to rank the skill levels of chess players.
 
