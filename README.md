@@ -8,7 +8,7 @@ This is a big disadvantage in comparison to the spreads set by Vegas oddsmakers 
 
 ---
 
-##### So how accurate were the predictions after all?
+#### So how accurate were the predictions after all?
 
 Model | RMSE
 ----|----
@@ -21,7 +21,7 @@ The accuracy of the predictions fall short of the Vegas lines, as expected, but 
 
 ---
 
-##### Was the model biased in any way?
+#### Was the model biased in any way?
 
 Model | Avg Pt Difference in terms of favorite/underdog|
 ----|----
@@ -47,7 +47,7 @@ Positive values mean that the favored team outperformed the spread, whereas nega
 
 ---
 
-##### Who selected winners better?
+#### Who selected winners better?
 
 Model | Winners Predicted Correctly
 ----|----
@@ -62,7 +62,7 @@ So we can say that over the course of the season 538 predicted **158.5** correct
 
 ---
 
-##### What were the best and worst predictions by 538?
+#### What were the best and worst predictions by 538?
 
 11 games ended 31 points or more off from 538's spread. These were mainly big blowouts from the season, except notably the Panther's victory over the Saints where they were expected to be 13 point underdogs.
 
@@ -98,7 +98,7 @@ SF	|9	|14	|CHI | +5.5
 
 ---
 
-##### Which teams were favored or unfavored more than others?
+#### Which teams were favored or unfavored more than others?
 
 As stated earlier, 538's model does not take into account injuries or roster changes. So teams like the Bills that performed well last season were projected to continue that streak into this year and ended up scoring almost 5 less point per game than the model projected. While teams like the Bears that did poorly last year were placed very low in the preseason power rankings and actually ended up scoring 7.5 points per game *more* than projected.
 
@@ -116,11 +116,11 @@ IND |+7.31
 HOU |+6.09
 CLE |+5.31
 
-#### [Average Performance of Every Team Compared to 538 Projections](https://i.imgur.com/ZxqPwLc.jpg)
+### [Average Performance of Every Team Compared to 538 Projections](https://i.imgur.com/ZxqPwLc.jpg)
 
 ---
 
-##### But the most important question is...
+### But the most important question is...
 
 What would happen if you bet on the Vegas lines using 538 as a guide? If 538 managed to beat the Vegas oddsmakers for a season, someone using their spreads could stand to make a lot of money. However, at least in this season, that is not how it played out.
 
