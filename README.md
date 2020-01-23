@@ -1,10 +1,10 @@
 # Analyzing 538's NFL Predictions Over the 2018 Season
 
-538 creates its NFL predictions using an ['Elo" rating system](https://fivethirtyeight.com/methodology/how-our-nfl-predictions-work/), similar to the one used to rank the skill levels of chess players.
+538 creates its NFL predictions using an ["Elo" rating system](https://fivethirtyeight.com/methodology/how-our-nfl-predictions-work/), similar to the one used to rank the skill levels of chess players.
 
-Each team is assigned an Elo score, and this number is used to compare teams and calculate the win probabilities and projected point spreads of each game. The full methodology is explained [here](https://fivethirtyeight.com/methodology/how-our-nfl-predictions-work/), but the important take away is that each teams rankings are determined **only** by home field advantage and performance in previous games. Injuries, roster moves, and other important factors are not accounted for.
+Each team is assigned an Elo score, this number is then used to compare teams, calculate win probabilities, and project point spreads of each game. Their full methodology is explained [here](https://fivethirtyeight.com/methodology/how-our-nfl-predictions-work/), but the important take away is that each team's rankings are determined using **only** home field advantage and performance in previous games. Injuries, roster moves, and other important factors are not accounted for.
 
-This is a big disadvantage in comparison to the spreads set by Vegas oddsmakers and NFL analysts who most definitely take those things into account. Despite this, the predictions tend not to be too far off, and 538's win probabilities are still held in high regard by fans, and often cited on Reddit as well as in sports publications.
+This is a big disadvantage in comparison to the spreads set by Vegas oddsmakers who most definitely take those things into account. Despite this, the predictions tend not to be too far off, and 538's win probabilities are still held in high regard by fans, and often cited on social media as well as in sports publications.
 
 ---
 
@@ -17,7 +17,7 @@ Model | RMSE
 **Predict Only Ties** | 14.50
 
 
-The accuracy of the predictions fall short of the Vegas lines, as would be expected, but not by much. The RMSE (a measure of error, with lower values meaning less error) of 538's predictions this past season was **13.57**, and Vegas's was **13.10**. For comparison, if you had a model that predicted every single game to end in a tie, the RMSE would have been **14.50**.
+The accuracy of the predictions fall short of the Vegas lines, as expected, but not by much! The RMSE (a measure of error, with lower values meaning less error) of 538's predictions this past season was **13.57**, and Vegas's was **13.10**. For comparison, if you had a naive model that predicted every single game to end in a tie, the RMSE would have been **14.50**.
 
 ---
 
@@ -33,9 +33,9 @@ Model | Avg Pt Difference in terms of favorite/underdog|
 **538** | -0.39
 **Vegas** | 0.01
 
-538's model includes factors such as home field advantage adjustment and *k-factor*, which is a measure of how much a game's outcome should adjust the rating of a specific team. Undoubtedly a lot of research has been put into setting these constants in a way that most accurately reflects the NFL, but it is impossible for them to be perfect, and if they are set too high or too low we might expect to see biases emerge in the spreads.
+538's model includes constants such as a home-field advantage adjustment and *k-factor*, which is a measure of how much a game's outcome should adjust the Elo rating of a specific team. Undoubtedly a lot of research has been put into setting these constants in a way that  accurately reflects reality, but it is impossible to be perfect, and if they are off we might expect to see biases emerge in the spreads.
 
-538's model overestimated the performance of the favorite team on average by **.93**, almost one point, whereas Vegas tended to overestimate the favorite by only **.06**.
+This year, 538's model overestimated the performance of the favorite team on average by **.93**, almost one point, whereas Vegas tended to overestimate the favorite by only **.06**.
 
 538 overestimated the home team by **.39** points whereas Vegas saw very little bias in terms of home field and favored the away team by only **.01**!
 
@@ -54,13 +54,17 @@ Model | Winners Predicted Correctly
 **538** | 158.5
 **Vegas** | 171
 
-Out of the 256 games played this season, 538 correctly favored the winning team 155 times. Their model also gave a 'PK' or 0 spread seven times. Assuming that someone trying to predict winners using this model would flip a coin when in this event, they would be expected to get the prediction right 50% or 3.5 times. So we can say that over the course of the season 538 predicted **158.5** correct winners. Compare this to Vegas who predicted the correct winner **171** times.
+Out of the 256 games played this season, 538 correctly favored the winning team 155 times. 
+
+Their model also gave a 'PK' or 0 spread seven times. If we assume that someone using this model to make predictions just flips a coin whenver they get a 'PK', they would be expected to get the prediction right 50% or 3.5 times. 
+
+So we can say that over the course of the season 538 predicted **158.5** correct winners. Compare this to Vegas who predicted the correct winner **171** times.
 
 ---
 
 ##### What were the best and worst predictions by 538?
 
-11 games ended 31 points or more off from 538's spread. These are mainly the big blowouts from the season, except notably the Panther's victory over the Saints where they were expected to be 13 point underdogs.
+11 games ended 31 points or more off from 538's spread. These were mainly big blowouts from the season, except notably the Panther's victory over the Saints where they were expected to be 13 point underdogs.
 
 Home| | | Away | 538 Spread for Home Team
 ---|---|----|---- | ----
@@ -96,7 +100,7 @@ SF	|9	|14	|CHI | +5.5
 
 ##### Which teams were favored or unfavored more than others?
 
-As stated earlier, 538's model does not take into account injuries or roster changes. So teams like the Bills that performed well last season were projected to continue that streak into this year and ended up scoring almost 5 less point per game than the model projected, while teams like the Bears that did poorly last year were placed very low in the preseason power rankings and actually ended up scoring 7.5 points per game more than the projections.
+As stated earlier, 538's model does not take into account injuries or roster changes. So teams like the Bills that performed well last season were projected to continue that streak into this year and ended up scoring almost 5 less point per game than the model projected. While teams like the Bears that did poorly last year were placed very low in the preseason power rankings and actually ended up scoring 7.5 points per game *more* than projected.
 
 Overrated Teams | Avg Performance Relative to Prediction
 ---|---
