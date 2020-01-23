@@ -8,7 +8,7 @@ This is a big disadvantage in comparison to the spreads set by Vegas oddsmakers 
 
 ---
 
-#### So how accurate were the predictions after all?
+### So how accurate were the predictions after all?
 
 Model | RMSE
 ----|----
@@ -21,7 +21,7 @@ The accuracy of the predictions fall short of the Vegas lines, as expected, but 
 
 ---
 
-#### Was the model biased in any way?
+### Was the model biased in any way?
 
 Model | Avg Pt Difference in terms of favorite/underdog|
 ----|----
@@ -41,13 +41,13 @@ This year, 538's model overestimated the performance of the favorite team on ave
 
 The whole distribution of prediction accuracy is visualized here: 
 
-#### [Accuracy of Point Spreads over 2018 Season](https://i.imgur.com/EFSoxlK.jpg)
+### [Accuracy of Point Spreads over 2018 Season](https://i.imgur.com/EFSoxlK.jpg)
 
 Positive values mean that the favored team outperformed the spread, whereas negative values mean the favored team underperformed.
 
 ---
 
-#### Who selected winners better?
+### Who selected winners better?
 
 Model | Winners Predicted Correctly
 ----|----
@@ -62,7 +62,7 @@ So we can say that over the course of the season 538 predicted **158.5** correct
 
 ---
 
-#### What were the best and worst predictions by 538?
+### What were the best and worst predictions by 538?
 
 11 games ended 31 points or more off from 538's spread. These were mainly big blowouts from the season, except notably the Panther's victory over the Saints where they were expected to be 13 point underdogs.
 
@@ -98,7 +98,7 @@ SF	|9	|14	|CHI | +5.5
 
 ---
 
-#### Which teams were favored or unfavored more than others?
+### Which teams were favored or unfavored more than others?
 
 As stated earlier, 538's model does not take into account injuries or roster changes. So teams like the Bills that performed well last season were projected to continue that streak into this year and ended up scoring almost 5 less point per game than the model projected. While teams like the Bears that did poorly last year were placed very low in the preseason power rankings and actually ended up scoring 7.5 points per game *more* than projected.
 
